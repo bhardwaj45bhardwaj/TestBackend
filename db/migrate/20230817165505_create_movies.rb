@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration[7.0]
     create_table :movies do |t|
       t.string :name
       t.text :description
-      t.date :release_date
+      t.string :release_date
       t.string :director_name
       t.string :actor_name
       t.text :filming_location

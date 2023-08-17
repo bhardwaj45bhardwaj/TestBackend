@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_17_165551) do
   create_table "movies", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.date "release_date"
+    t.string "release_date"
     t.string "director_name"
     t.string "actor_name"
     t.text "filming_location"

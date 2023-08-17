@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-	belongs_to :moview
+	belongs_to :movie
 end

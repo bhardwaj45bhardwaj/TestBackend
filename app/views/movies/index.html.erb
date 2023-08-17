@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies List</title>
+</head>
+<body>
+
+<h1>Movies List</h1>
+
+<%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :actor_search, params[:actor_name], placeholder: 'Enter actor name' %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+<table border="1">
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Release Date</th>
+    <th>Actor</th>
+    <th>Rating Star</th>
+  </tr>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.name %></td>
+      <td><%= movie.description %></td>
+      <td><%= movie.release_date %></td>
+      <td><%= movie.actor_name %></td>
+      <td><%= movie.average_rating %></td>
+    </tr>
+  <% end %>
+</table>
+
+</body>
+</html>
